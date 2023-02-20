@@ -1,0 +1,24 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-theloadbox-dev-174950-authRole",
+      "UnauthRoleArn": "arn:aws:iam::742102661431:role/amplify-theloadbox-dev-174950-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::742102661431:role/amplify-theloadbox-dev-174950-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-theloadbox-dev-174950-deployment",
+      "UnauthRoleName": "amplify-theloadbox-dev-174950-unauthRole",
+      "StackName": "amplify-theloadbox-dev-174950",
+      "StackId": "arn:aws:cloudformation:ap-south-1:742102661431:stack/amplify-theloadbox-dev-174950/b7bf0000-ab98-11ed-830f-0696cb063924",
+      "AmplifyAppId": "d3hlj290utoea0"
+    },
+    "categories": {
+      "auth": {
+        "theloadbox8a1ef5ba": {},
+        "userPoolGroups": {}
+      },
+      "api": {
+        "theloadbox": {}
+      }
+    }
+  }
+}

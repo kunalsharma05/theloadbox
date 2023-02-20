@@ -1,0 +1,46 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+type Auction @model {
+  id: ID!
+  name: String!
+  lanes: [Lane]! @hasMany
+  type: AuctionType!
+  startAt: AWSDateTime!
+  endAt: AWSDateTime!
+  createdAt: AWSDateTime!
+  status: AuctionStatus!
+  owner: String!
+}
+
+enum AuctionType {
+  LANE
+  LOT
+}
+
+enum AuctionStatus {
+  OPEN
+  CLOSED
+}
+
+type Lane @model {
+  id: ID!
+  source: String!
+  destination: String!
+  truckType: String!
+  trips: Int!
+  auction: Auction @belongsTo
+  loadType: String!
+  priceCap: Float!
+  bids: [Bid]! @hasMany
+}
+
+type Bid @model {
+  id: ID!
+  lane: Lane @belongsTo
+  price: Float!
+  createdAt: AWSDateTime!
+  olderPrices: [Float]
+  owner: String!
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "groupName": "carriers",
+    "precedence": 1
+  },
+  {
+    "groupName": "shippers",
+    "precedence": 2
+  },
+  {
+    "groupName": "admin",
+    "precedence": 3
+  }
+]
